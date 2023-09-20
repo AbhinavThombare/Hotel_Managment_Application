@@ -1,0 +1,60 @@
+.no-table-book {
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+.layout {
+    // padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.card-layout {
+    padding: 10px;
+    width: fit-content;
+}
+
+.example-card {
+    max-width: 225px;
+    max-height: fit-content;
+    padding: 10px;
+}
+
+#memotable{
+    text-align: center;
+    width: 200px;
+}
+.mat-card-content {
+   margin-bottom: 0px;
+   height: 10%;
+}
+
+p {
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#pay {
+    background-color: green;
+    color: white;
+}
+
+.pay-cancelbtn {
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:350px) {
+    .no-table-book h1 {
+        font-size: 15px;
+    }
+}

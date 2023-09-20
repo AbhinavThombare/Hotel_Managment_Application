@@ -1,0 +1,28 @@
+<div class="layout">
+    <mat-form-field class="example-form-field" appearance="fill">
+        <div class="display">
+            <mat-label>Choose Date</mat-label>
+            <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+        </div>
+        <mat-date-range-input [formGroup]="dateRange" [rangePicker]="campaignOnePicker">
+            <input matStartDate placeholder="Start date" formControlName="start">
+            <input matEndDate placeholder="End date" formControlName="end">
+        </mat-date-range-input>
+        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+        <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="m-4" (click)="datePick()">Submit</button>
+</div>
+
+<div class="cardlayout">
+    <div class="totalAmountLayout">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title><h3>Start Date : {{start_date}}</h3></mat-card-title>
+                <mat-card-title><h3>End Date : {{end_date}}</h3></mat-card-title>
+            </mat-card-header>
+            <mat-card-content><h2><strong>Total Amount : {{ getTotalAmount | currency :"&#8377;"}}</strong></h2></mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+#layout{
+    height: 100%;
+    background-color: rgb(127, 255, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    background-color: #ccccff;
+    padding: 20px;
+    width: 50%  ;
+    border-radius: 5px;
+}
+
+#finput{
+    margin-bottom: 0px;
+}
+
+label span {
+    color: red;
+}
+
+#msg{
+    padding-top: 5px;
+    color: red;
+    margin-bottom: 0px;
+}
+
+#buttoncard {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#buttoncard button{
+    width: fit-content;
+}
+
+#finput{
+    padding-top: 10px;
+}
+
+@media screen and (max-width:600px) {
+    #card{
+        width: 70%;
+    }
+
+    #buttoncard button{
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width:350px) {
+    #card{
+        width: 80%;
+    }
+    #buttoncard button{
+        width: fit-content;
+    }
+}

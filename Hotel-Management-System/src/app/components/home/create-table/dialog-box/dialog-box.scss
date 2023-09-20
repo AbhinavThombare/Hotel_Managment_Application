@@ -1,0 +1,51 @@
+.form-layout {
+    text-align: center;
+    margin: 5px;
+}
+
+.form-input {
+    margin: 5px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.tableView {
+    max-height: 250px;
+    overflow: auto;
+}
+
+table.mat-table {
+    width: 100%;
+    // min-height: 50px;
+}
+
+.addbtn {
+    margin: 5px;
+}
+
+.submitbtn {
+    margin: 5px;
+}
+
+#occupied {
+    color: red
+}
+
+#editbtn:hover {
+    background-color: rgb(211, 211, 255);
+    color: blue;
+}
+
+#deletebtn:hover {
+    background-color: rgb(255, 211, 211);
+    color: red;
+}
+
+@media screen and (max-width:550px) {
+    .form-flex {
+        display: block;
+    }
+}

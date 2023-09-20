@@ -1,0 +1,5 @@
+Step 1 : You Have to clone/Download Hotel-Mangement Repo in one folder.
+Step 2 : Then you have to clone/Download Hotel-Mangement-Database Repo in other folder.
+Step 3 : You have to download / install mongoDB tools to run database
+Step 4 : Them run first Command for Both Project "npm i"
+Step 5 : Then run files for anglar use 'npm run ng serve or ng server'. For nodeJs use ' npm start '

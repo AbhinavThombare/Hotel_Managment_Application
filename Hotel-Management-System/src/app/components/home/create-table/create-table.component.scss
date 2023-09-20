@@ -1,0 +1,87 @@
+.layout {
+    height: 100%;
+    padding: 20px;
+    // text-align: center;
+}
+
+#tableNo {
+    text-align: center;
+}
+
+#totalPrice {
+    text-align: center;
+}
+
+.tableView {
+    margin-top: 5px;
+}
+
+table.mat-table {
+    width: 100%;
+}
+
+#tableth {
+    text-align: center;
+}
+
+table td span li {
+    list-style: none;
+}
+
+#editbtn:hover {
+    background-color: rgb(211, 211, 255);
+    color: blue;
+}
+
+#deletebtn:hover {
+    background-color: rgb(255, 211, 211);
+    color: red;
+}
+
+.form-layout {
+    text-align: center;
+    margin: 5px;
+}
+
+.form-input {
+    margin: 5px;
+}
+
+.form-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-list {
+    padding: 5px;
+}
+
+.tableView {
+    max-height: 470px;
+    overflow: auto;
+}
+
+@media screen and (max-width:600px) {
+    .layout {
+        padding: 5px;
+    }
+
+    .mat-header-cell {
+        padding-right: 5px;
+    }
+
+    .mat-cell {
+        font-size: 12px;
+    }
+
+    td.mat-cell:last-of-type,
+    th.mat-header-cell:last-of-type,
+    td.mat-footer-cell:last-of-type {
+        padding-right: 0px;
+    }
+
+    td.mat-cell:first-of-type,
+    th.mat-header-cell:first-of-type {
+        padding-left: 5px;
+    }
+}

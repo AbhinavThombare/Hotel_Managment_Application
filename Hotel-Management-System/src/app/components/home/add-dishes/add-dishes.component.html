@@ -1,0 +1,80 @@
+<div class="layout">
+    <div class="form-layout">
+        <div class="form-inputbox1">
+            <mat-form-field appearance="outline">
+                <mat-label>Dish Category</mat-label>
+                <mat-select [(ngModel)]="category">
+                    <mat-option value="VEG">VEG</mat-option>
+                    <mat-option value="NON_VEG">NON_VEG</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="combine">
+            <div class="form-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Dish Name</mat-label>
+                    <input matInput placeholder="Dish Name" [(ngModel)]="name">
+                </mat-form-field>
+            </div>
+
+            <div class="form-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Dish Price</mat-label>
+                    <input matInput placeholder="Dish Price" [(ngModel)]="price">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="add-button">
+            <button *ngIf="!uploadbtn" class="btn btn-success" id="addButton" (click)="adddish()">Add</button>
+            <button *ngIf="uploadbtn" class="btn btn-success" id="uploadButton" (click)="Upload()">Upload</button>
+        </div>
+    </div>
+
+    <div class="table-layout">
+        <mat-form-field class="filterBox">
+            <mat-label id="filtertitle">Dish_Name</mat-label>
+            <input id="filterInput" matInput placeholder="Dish_Name" [(ngModel)]="searchText">
+        </mat-form-field>
+        <section class="example-container mat-elevation-z8" tabindex="0">
+            <table mat-table [dataSource]="result | filterValue:searchText ">
+
+
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                  </ng-container>
+              
+                <ng-container matColumnDef="Category">
+                    <th mat-header-cell *matHeaderCellDef> Category </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Category}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef> Dish Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Dish_Name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Price">
+                    <th mat-header-cell *matHeaderCellDef> Price </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Price}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Action">
+                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button id="edit" mat-raised-button color="primary" (click)="editDish(element)">Edit</button>
+                        <button id="delete" mat-raised-button color="warn" (click)="deleteDish(element)">Delete</button>
+                    </td>
+                </ng-container>
+                
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" ></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </section>
+
+    </div>
+
+</div>

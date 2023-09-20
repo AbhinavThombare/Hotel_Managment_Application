@@ -1,0 +1,43 @@
+<div class="layout">
+    <mat-card>
+        <div id="printData">
+            <div id="titles">
+                <mat-card-title>Name</mat-card-title>
+                <mat-card-subtitle>Table No : {{tableDetail.tableNo}}</mat-card-subtitle>
+            </div>
+            <mat-card-content>
+                <section id="tableoverflow" class="mat-elevation-z8" tabindex="0">
+                    <table id="tableMemo" mat-table [dataSource]="tableDetail.Dishes">
+                        <ng-container matColumnDef="Dish">
+                            <th mat-header-cell *matHeaderCellDef>Dish</th>
+                            <td mat-cell *matCellDef="let element">
+                                {{element.dish}}
+                            </td>
+                            <td mat-footer-cell *matFooterCellDef> <strong>Total Price</strong></td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Quantity">
+                            <th mat-header-cell *matHeaderCellDef>Quantity</th>
+                            <td mat-cell *matCellDef="let element">{{element.quantity}}</td>
+                            <td mat-footer-cell *matFooterCellDef></td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="Price">
+                            <th mat-header-cell *matHeaderCellDef>Price</th>
+                            <td mat-cell *matCellDef="let element">{{element.price}}</td>
+                            <td mat-footer-cell *matFooterCellDef> <strong>{{tableDetail.Total_Price}}</strong></td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displaycoloumn; sticky:true"></tr>
+                        <tr mat-row *matRowDef="let row; columns:displaycoloumn"></tr>
+                        <tr mat-footer-row *matFooterRowDef="displaycoloumn; sticky: true"></tr>
+                    </table>
+                </section>
+            </mat-card-content>
+        </div>
+        <div id="buttons">
+            <button class="m-2" mat-raised-button color="primary" matDialogClose (click)="printData()">Print</button>
+            <button class="m-2" mat-raised-button color="warn" matDialogClose>Cancel</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,24 @@
+<div class="no-table-book" *ngIf="!allTableData.length">
+  <h1>No Table Booked Yet!</h1>
+</div>
+
+<div class="layout">
+  <div class="card-layout" *ngFor="let num of allTableData">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Table No : {{num.tableNo}}</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p><strong>Total Price : </strong><strong>{{num.Total_Price}}</strong></p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions class="pay-cancelbtn">
+        <div><button id="pay" mat-raised-button color="success" (click)="openDetails(num)">Pay</button></div>
+        <div><button id="cancel" mat-raised-button color="warn">Cancel</button></div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+
+</div>

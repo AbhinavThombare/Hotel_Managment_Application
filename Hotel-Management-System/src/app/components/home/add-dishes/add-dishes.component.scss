@@ -1,0 +1,133 @@
+.combine {
+    display: flex;
+    justify-content: center;
+}
+
+.layout {
+    display: flex;
+}
+
+.form-layout {
+    width: 50%;
+    padding: 10px;
+}
+
+.form-input {
+    padding: 5px;
+    text-align: center;
+}
+
+.form-inputbox1 {
+    padding: 10px;
+    text-align: center;
+}
+
+.add-button {
+    text-align: center;
+}
+
+.example-container {
+    height: 450px;
+    overflow: auto;
+}
+
+.filterBox {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.table-layout {
+    width: 50%;
+    padding: 10px;
+}
+
+.mat-cell{
+    font-size: 13px;
+    padding-right: 2px;
+}
+
+#edit {
+    margin: 5px;
+}
+
+#delete {
+    margin: 5px;
+}
+
+#filtertitle {
+    padding-left: 5px;
+}
+
+#filterInput {
+    padding-left: 5px;
+}
+
+@media screen and (max-width:1010px) {
+    .form-layout {
+        width: 60%;
+        padding: 10px;
+    }
+
+    .table-layout {
+        width: 60%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .layout {
+        display: block;
+        // justify-content: center;
+    }
+
+    .form-layout {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .filterBox {
+        width: 100%;
+    }
+
+    .table-layout {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .combine {
+        display: block;
+    }
+
+    .mat-cell {
+        // font-size: 10px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .mat-header-cell {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .mat-cell {
+        font-size: 11px;
+        padding-left: 5px;
+        // padding-right: 5px;
+    }
+    td.mat-cell:last-of-type,
+    th.mat-header-cell:last-of-type,
+    td.mat-footer-cell:last-of-type {
+        padding-right: 0px;
+    }
+
+    td.mat-cell:first-of-type,
+    th.mat-header-cell:first-of-type {
+        padding-left: 10px;
+    }
+}
