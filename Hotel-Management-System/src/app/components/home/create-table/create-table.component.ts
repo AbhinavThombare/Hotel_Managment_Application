@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit, Output, ViewChild } from '@angular/core';
 import { UntypedFormGroup } from '@angular/forms';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatTable } from '@angular/material/table';
+import { MatLegacyDialog as MatDialog, MatLegacyDialogRef as MatDialogRef, MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
+import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { Data } from '@angular/router';
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';
 import { NotificationAlertService } from 'src/app/services/notification-alert/notification-alert.service';

@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';

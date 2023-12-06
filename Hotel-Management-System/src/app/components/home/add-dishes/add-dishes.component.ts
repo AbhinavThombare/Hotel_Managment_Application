@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { NotificationAlertService } from 'src/app/services/notification-alert/notification-alert.service';
 
 @Component({
