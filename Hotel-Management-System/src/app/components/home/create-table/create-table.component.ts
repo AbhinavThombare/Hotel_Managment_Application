@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit, Output, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { Data } from '@angular/router';
@@ -17,7 +17,7 @@ import { NotificationAlertService } from 'src/app/services/notification-alert/no
 })
 export class CreateTableComponent implements OnInit {
 
-  editProfileForm!: FormGroup;
+  editProfileForm!: UntypedFormGroup;
   tableData: any = [];
   displayedColumns: string[] = ['Table_No', 'Dishes', 'Quantity', 'Unit_Price', 'Price', 'Total_Price', 'Action'];
 

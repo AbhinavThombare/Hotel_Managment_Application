@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import { NodeServerApiService } from 'src/app/services/Node-Server-Api/node-server-api.service';
 // import { NotificationApiService } from 'src/app/services/Notification-Api/notification-api.service';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password.component.scss']
 })
 export class ForgotPasswordComponent implements OnInit {
-  forgotform: FormGroup ;
+  forgotform: UntypedFormGroup ;
   user:boolean=false
 
 
@@ -30,21 +30,21 @@ export class ForgotPasswordComponent implements OnInit {
   email: any;
   updateUser: any;
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     // private nodeserverapi: NodeServerApiService,
     // private notificationapi : NotificationApiService,
     private router : Router
   ) {
     this.forgotform = this.fb.group({
-      email: new FormControl('',Validators.compose([
+      email: new UntypedFormControl('',Validators.compose([
         Validators.required,
         Validators.email
       ])),
-      password: new FormControl('',Validators.compose([
+      password: new UntypedFormControl('',Validators.compose([
         Validators.required,
         Validators.minLength(6)
       ])),
-      cpassword: new FormControl('',Validators.compose([
+      cpassword: new UntypedFormControl('',Validators.compose([
         Validators.required,
       ]))
     })

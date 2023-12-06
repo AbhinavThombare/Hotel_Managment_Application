@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { DatePipe } from '@angular/common'
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';
 
@@ -31,9 +31,9 @@ export class TotalAmountComponent implements OnInit {
     // },3000)
   }
 
-  dateRange = new FormGroup({
-    start: new FormControl(),
-    end: new FormControl(),
+  dateRange = new UntypedFormGroup({
+    start: new UntypedFormControl(),
+    end: new UntypedFormControl(),
   });
 
   datePick() {

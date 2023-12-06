@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';
 import { NotificationAlertService } from 'src/app/services/notification-alert/notification-alert.service';
@@ -13,7 +13,7 @@ import { NotificationAlertService } from 'src/app/services/notification-alert/no
 })
 export class LoginComponent implements OnInit {
 
-  loginform: FormGroup;
+  loginform: UntypedFormGroup;
   message_error = {
     'email': [
       { type: 'required', message: 'Email is required' },
@@ -26,17 +26,17 @@ export class LoginComponent implements OnInit {
   token: any;
   // resToken: Object | undefined | null ;
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private nodeserverapi: NodeServerApiService,
     private notificationapi: NotificationAlertService,
     private router: Router
   ) {
     this.loginform = this.formBuilder.group({
-      email: new FormControl('', Validators.compose([
+      email: new UntypedFormControl('', Validators.compose([
         Validators.required,
         Validators.email
       ])),
-      password: new FormControl('', Validators.compose([
+      password: new UntypedFormControl('', Validators.compose([
         Validators.required,
       ])),
     })

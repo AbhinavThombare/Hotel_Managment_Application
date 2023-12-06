@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 import { NodeServerApiService } from 'src/app/services/node-server-api/node-server-api.service';
 import { NotificationAlertService } from 'src/app/services/notification-alert/notification-alert.service';
@@ -10,7 +10,7 @@ import { NotificationAlertService } from 'src/app/services/notification-alert/no
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  signupdata: FormGroup
+  signupdata: UntypedFormGroup
   message_error = {
     'name': [
       { type: 'required', message: 'Name is required' },
@@ -38,30 +38,30 @@ export class SignupComponent implements OnInit {
   }
 
   constructor(
-    public formBuilder: FormBuilder,
+    public formBuilder: UntypedFormBuilder,
     private nodeserverapi: NodeServerApiService,
     private notificationapi: NotificationAlertService,
     private router: Router
   ) {
     this.signupdata = this.formBuilder.group({
-      name: new FormControl('', Validators.compose([
+      name: new UntypedFormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('[a-zA-Z]*$')
       ])),
-      email: new FormControl('', Validators.compose([
+      email: new UntypedFormControl('', Validators.compose([
         Validators.required,
         Validators.email
       ])),
-      mobile: new FormControl('', Validators.compose([
+      mobile: new UntypedFormControl('', Validators.compose([
         Validators.required,
         Validators.pattern('[0-9]{10}$'),
       ])),
-      password: new FormControl('', Validators.compose([
+      password: new UntypedFormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(30),
       ])),
-      cpassword: new FormControl('', Validators.compose([
+      cpassword: new UntypedFormControl('', Validators.compose([
         Validators.required
       ]))
 
